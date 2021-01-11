@@ -981,7 +981,6 @@ void TrafficController::dump(DumpWriter& dw, bool verbose) {
 
     ScopedIndent indentPreBpfModule(dw);
     dw.println("BPF module status: %s", mBpfEnabled ? "enabled" : "disabled");
-    dw.println("BPF support level: %s", BpfLevelToString(getBpfSupportLevel()).c_str());
 
     if (!mBpfEnabled) {
         return;
